@@ -1,12 +1,12 @@
-'use client'
+import Providers from './providers'
 
-import { ChakraProvider } from '@chakra-ui/react'
+export { metadata } from './metadata'
 
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body>
-				<ChakraProvider>{children}</ChakraProvider>
+				<Providers>{children}</Providers>
 			</body>
 		</html>
 	)
