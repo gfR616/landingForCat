@@ -1,10 +1,13 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/components/*": ["src/components/*"],
-      "@/blocks/*": ["src/app/blocks/*"],
-      "@/styles/*": ["src/styles/*"]
-    }
-  }
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@/components/*": ["src/components/*"],
+			"@/app/*": ["src/app/*"],
+			"@/pages/*": ["src/pages/*"]
+		}
+	},
+	"include": ["src/**/*.js", "src/**/*.jsx"],
+	"exclude": ["node_modules", ".next"],
+	"forceConsistentCasingInFileNames": true
 }
