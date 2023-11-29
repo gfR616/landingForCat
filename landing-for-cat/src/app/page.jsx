@@ -1,5 +1,6 @@
 export { metadata } from './metadata'
+import { Button, ButtonGroup } from '@chakra-ui/react'
 
 export default function Page() {
-	return <>hello world</>
+	return (<Button colorScheme='blue'>Button</Button>)
 }
