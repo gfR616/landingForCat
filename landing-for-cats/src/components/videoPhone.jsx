@@ -1,3 +1,4 @@
+import HelloPhrace from './helloPhrase'
 import { Box } from '@chakra-ui/react'
 import React from 'react'
 
@@ -21,6 +22,7 @@ const VideoPhone = () => {
 			>
 				<source src="head.webm" type="video/webm" />
 			</video>
+			<HelloPhrace />
 		</Box>
 	)
 }

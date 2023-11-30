@@ -6,6 +6,9 @@ import React from 'react'
 const HomePage = () => {
 	return (
 		<Box>
+			<Box color="white" bg="black">
+				by Roman
+			</Box>
 			<VideoPhone />
 			<Carusel />
 		</Box>
