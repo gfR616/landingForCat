@@ -1,0 +1,17 @@
+export const photos = {
+	photo1: '1.jpg',
+	photo2: '2.jpg',
+	photo3: '3.jpg',
+	photo4: '4.jpg',
+	photo5: '5.jpg',
+	photo6: '6.jpg',
+	photo7: '7.jpg',
+	photo8: '8.jpg',
+	photo9: '9.jpg',
+	photo10: '10.jpg',
+	photo11: '11.jpg',
+	photo12: '12.jpg',
+	photo13: '13.jpg',
+	photo14: '14.jpg',
+	photo15: '15.jpg',
+}
