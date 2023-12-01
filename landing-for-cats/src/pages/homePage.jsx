@@ -12,7 +12,7 @@ const HomePage = () => {
 		new WOW().init()
 	}, [])
 	return (
-		<Box bg="#000000" position="relative" zIndex="-2">
+		<Box bg="black">
 			<Header />
 			<HelloBackground />
 			<Dummy />

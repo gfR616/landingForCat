@@ -3,7 +3,11 @@ import {
 	Box,
 	Image,
 	Modal,
+	ModalBody,
+	ModalCloseButton,
 	ModalContent,
+	ModalFooter,
+	ModalHeader,
 	ModalOverlay,
 	useDisclosure,
 } from '@chakra-ui/react'
@@ -16,6 +20,9 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 const Carusel = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure()
+	const OverlayOne = () => (
+		<ModalOverlay bg="blackAlpha.300" backdropFilter="blur(10px) hue-rotate(90deg)" />
+	)
 
 	return (
 		<Box m={3}>

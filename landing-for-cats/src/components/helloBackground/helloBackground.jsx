@@ -10,11 +10,16 @@ const HelloBackground = () => {
 		new WOW().init()
 	}, [])
 	return (
-		<Box>
-			<Box className="wow slideInRight" data-wow-duration="1s" data-wow-delay="1s">
+		<Box h="100vh">
+			<VideoBackground />
+			<Box
+				pos="relative"
+				className="wow slideInRight"
+				data-wow-duration="1s"
+				data-wow-delay="1s"
+			>
 				<HelloPhrace />
 			</Box>
-			<VideoBackground />
 		</Box>
 	)
 }
