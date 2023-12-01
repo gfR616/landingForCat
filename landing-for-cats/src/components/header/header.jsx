@@ -2,7 +2,6 @@ import { Box } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 
 const Header = () => {
-
 	useEffect(() => {
 		window.scrollTo(0, 24)
 		window.onbeforeunload = function () {
@@ -11,7 +10,7 @@ const Header = () => {
 	}, [])
 
 	return (
-		<Box color="white" bg="black">
+		<Box color="white" bg="#140416">
 			by Roman
 		</Box>
 	)

@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react'
+import { Box, Center, Text } from '@chakra-ui/react'
 import React from 'react'
 
 const HelloPhrace = () => {
@@ -13,12 +13,17 @@ const HelloPhrace = () => {
 			width="100%"
 			height="100vh"
 		>
-			<p>
-				Привет!
-				<br /> Ты на сайте, посвещенном моим кошкам
+			<Text
+				fontWeight="bold" // делает текст жирным
+				textShadow="1px 3px 2px #87935c" // добавляет тень текста
+				fontSize="30px" // устанавливает размер шрифта
+				color="#000000"
+			>
+				<Text textAlign="center">Привет!</Text>
+				Вы на сайте, посвещенном моим кошкам,
 				<br />
-				Крути колесико!
-			</p>
+				<Text textAlign="center">покрутите колесико вниз, чтобы увидеть их.</Text>
+			</Text>
 		</Box>
 	)
 }

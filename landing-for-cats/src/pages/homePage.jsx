@@ -12,13 +12,14 @@ const HomePage = () => {
 		new WOW().init()
 	}, [])
 	return (
-		<Box>
+		<Box bg="#140416" position="relative" zIndex="-2">
 			<Header />
 			<HelloBackground />
 			<Dummy />
-			<Box className="wow bounceInUp">
+			<Box className="wow slideInRight" data-wow-duration="1s" data-wow-delay="1s">
 				<Carusel />
 			</Box>
+			<Dummy />
 		</Box>
 	)
 }

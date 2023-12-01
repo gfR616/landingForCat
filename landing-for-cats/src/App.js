@@ -1,5 +1,5 @@
-import './app.css'
 import HomePage from './pages/homePage'
+import './scrollBar.css'
 import { ChakraProvider } from '@chakra-ui/react'
 import React from 'react'
 
