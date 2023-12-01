@@ -7,7 +7,7 @@ import {
 	ModalOverlay,
 	useDisclosure,
 } from '@chakra-ui/react'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import 'swiper/css'
 import 'swiper/css/bundle'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
@@ -16,6 +16,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 const Carusel = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure()
 	const [selectedImage, setSelectedImage] = useState('')
+
 	return (
 		<Box>
 			<Swiper
