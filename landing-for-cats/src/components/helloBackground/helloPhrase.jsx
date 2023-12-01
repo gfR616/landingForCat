@@ -15,7 +15,6 @@ const HelloPhrace = () => {
 		>
 			<Text
 				fontWeight="bold" // делает текст жирным
-				textShadow="1px 3px 2px #87935c" // добавляет тень текста
 				fontSize="30px" // устанавливает размер шрифта
 				color="#000000"
 			>

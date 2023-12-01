@@ -10,7 +10,7 @@ const Header = () => {
 	}, [])
 
 	return (
-		<Box color="white" bg="#140416">
+		<Box color="white" bg="#000000">
 			by Roman
 		</Box>
 	)

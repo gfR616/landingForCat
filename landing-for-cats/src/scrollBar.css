@@ -1,5 +1,6 @@
 body {
 	min-height: 250vh;
+	overflow-x: hidden;
 }
 
 ::-webkit-scrollbar-button {
@@ -15,7 +16,7 @@ body {
 /* Цвет бегунка полосы, а так же его закругление. */
 ::-webkit-scrollbar-thumb {
 	-webkit-border-radius: 0px;
-	border-radius: 0px;
+	border-radius: 5px;
 	background-color: rgb(185, 146, 19);
 }
 
@@ -32,4 +33,3 @@ body {
 ::-webkit-scrollbar {
 	width: 8px;
 }
-

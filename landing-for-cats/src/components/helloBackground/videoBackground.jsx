@@ -17,7 +17,7 @@ const VideoBackground = () => {
 					height: '100%',
 					objectFit: 'cover',
 					transform: 'translate(-50%, -50%)',
-					zIndex: '-1',
+					zIndex: '-2',
 				}}
 			>
 				<source src="head.webm" type="video/webm" />
