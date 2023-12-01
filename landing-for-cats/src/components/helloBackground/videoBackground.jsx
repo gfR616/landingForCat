@@ -2,7 +2,7 @@ import HelloPhrace from './helloPhrase'
 import { Box } from '@chakra-ui/react'
 import React from 'react'
 
-const VideoPhone = () => {
+const VideoBackground = () => {
 	return (
 		<Box position="relative" height="100vh" width="100%">
 			<video
@@ -22,9 +22,8 @@ const VideoPhone = () => {
 			>
 				<source src="head.webm" type="video/webm" />
 			</video>
-			<HelloPhrace />
 		</Box>
 	)
 }
 
-export default VideoPhone
+export default VideoBackground

@@ -3,7 +3,16 @@ import React from 'react'
 
 const HelloPhrace = () => {
 	return (
-		<Box display="flex" alignItems="center" justifyContent="center" height="100vh">
+		<Box
+			display="flex"
+			justifyContent="center"
+			alignItems="center"
+			position="absolute"
+			top="0"
+			left="0"
+			width="100%"
+			height="100vh"
+		>
 			<p>
 				Привет!
 				<br /> Ты на сайте, посвещенном моим кошкам
