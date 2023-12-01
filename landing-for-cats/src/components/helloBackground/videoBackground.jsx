@@ -11,12 +11,9 @@ const VideoBackground = () => {
 				loop
 				muted
 				position="absolute"
-				width="100%"
-				left="50%"
-				top="50%"
-				height="100%"
+				heght="inherit"
+				w="100%"
 				objectFit="cover"
-				transform="translate(-50%, -50%)"
 			>
 				<source src="head.webm" type="video/webm" />
 			</Box>
