@@ -1,16 +1,5 @@
 import { photos } from '../api/catsPhoto'
-import {
-	Box,
-	Image,
-	Modal,
-	ModalBody,
-	ModalCloseButton,
-	ModalContent,
-	ModalFooter,
-	ModalHeader,
-	ModalOverlay,
-	useDisclosure,
-} from '@chakra-ui/react'
+import { Box, Image } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -19,11 +8,6 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 const Carusel = () => {
-	const { isOpen, onOpen, onClose } = useDisclosure()
-	const OverlayOne = () => (
-		<ModalOverlay bg="blackAlpha.300" backdropFilter="blur(10px) hue-rotate(90deg)" />
-	)
-
 	return (
 		<Box m={3}>
 			<Swiper
