@@ -1,3 +1,4 @@
+import { photos } from '../api/catsPhoto'
 import {
 	Box,
 	Button,
@@ -12,8 +13,7 @@ import {
 } from '@chakra-ui/react'
 import React from 'react'
 
-const ModalWindow = () => {
-	const { isOpen, onOpen, onClose } = useDisclosure()
+const ModalWindow = ({ isOpen, onClose, onGivePhoto }) => {
 	return (
 		<Box>
 			<Modal isOpen={isOpen} onClose={onClose}>
@@ -22,14 +22,14 @@ const ModalWindow = () => {
 					<ModalHeader>Modal Title</ModalHeader>
 					<ModalCloseButton />
 					<ModalBody>
-						<p>Lorem count={2}</p>
+						<img src={onGivePhoto} alt="Selected" />
 					</ModalBody>
 
 					<ModalFooter>
-						<Button colorScheme="blue" mr={3} onClick={onClose}>
+						<Button variant="ghost">Secondary Action</Button>
+						<Button colorScheme="blue" ml={3} onClick={onClose}>
 							Close
 						</Button>
-						<Button variant="ghost">Secondary Action</Button>
 					</ModalFooter>
 				</ModalContent>
 			</Modal>
