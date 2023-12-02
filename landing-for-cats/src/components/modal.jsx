@@ -16,19 +16,33 @@ import React from 'react'
 const ModalWindow = ({ isOpen, onClose, onGivePhoto }) => {
 	return (
 		<Box>
-			<Modal isOpen={isOpen} onClose={onClose}>
+			<Modal isOpen={isOpen} onClose={onClose} size="xl" bg="black">
 				<ModalOverlay />
-				<ModalContent>
-					<ModalHeader>Modal Title</ModalHeader>
-					<ModalCloseButton />
+				<ModalContent
+					style={{
+						display: 'flex',
+						justifyContent: 'center',
+						alignItems: 'center',
+						height: '92vh',
+						backgroundColor: '#050303b3',
+					}}
+				>
+					<ModalHeader color="white">Modal Title</ModalHeader>
+					<ModalCloseButton color="white" />
 					<ModalBody>
-						<img src={onGivePhoto} alt="Selected" />
+						<img
+							src={onGivePhoto}
+							alt="Selected"
+							style={{ maxHeight: '100%', width: 'auto' }}
+						/>
 					</ModalBody>
 
 					<ModalFooter>
-						<Button variant="ghost">Secondary Action</Button>
-						<Button colorScheme="blue" ml={3} onClick={onClose}>
-							Close
+						<Button colorScheme="blue" mr={3}>
+							предыдущее
+						</Button>
+						<Button colorScheme="blue" mr={0}>
+							следующее
 						</Button>
 					</ModalFooter>
 				</ModalContent>
