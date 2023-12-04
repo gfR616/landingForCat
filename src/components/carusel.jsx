@@ -1,6 +1,6 @@
 import { photos } from '../api/catsPhoto'
-import ModalWindow from './modal'
-import { Box, Image, useDisclosure } from '@chakra-ui/react'
+import ModalWindow from './modalWindow.jsx'
+import { Box, useDisclosure } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -10,12 +10,30 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 const Carusel = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure()
-	const [selectedPhoto, setSelectedPhoto] = useState(null)
+	const [currentPhotoIndex, setCurrentPhotoIndex] = useState(null)
 
-	const handleOpenModal = (photo) => {
-		setSelectedPhoto(photo)
-		onOpen()
+	useEffect(() => {
+		if (currentPhotoIndex !== null) {
+			onOpen()
+		}
+	}, [currentPhotoIndex])
+
+	const handleOpenModal = (photoIndex) => {
+		setCurrentPhotoIndex(photoIndex)
 	}
+
+	const handleNext = () => {
+		setCurrentPhotoIndex((prevIndex) => (prevIndex + 1) % photoKeys.length)
+	}
+
+	const handlePrev = () => {
+		setCurrentPhotoIndex(
+			(prevIndex) => (prevIndex - 1 + photoKeys.length) % photoKeys.length,
+		)
+	}
+
+	const photoKeys = Object.keys(photos)
+
 	return (
 		<Box m={3}>
 			<Swiper
@@ -29,8 +47,8 @@ const Carusel = () => {
 				className="mySwiper"
 				modules={[Autoplay, Pagination, Navigation]}
 			>
-				{Object.keys(photos).map((photoKey, index) => (
-					<SwiperSlide key={index} onClick={() => handleOpenModal(photos[photoKey])}>
+				{photoKeys.map((photoKey, index) => (
+					<SwiperSlide key={index} onClick={() => handleOpenModal(index)}>
 						{<img src={photos[photoKey]} alt={`Photo ${index + 1}`}></img>}
 					</SwiperSlide>
 				))}
@@ -38,8 +56,10 @@ const Carusel = () => {
 			<ModalWindow
 				isOpen={isOpen}
 				onClose={onClose}
-				onGivePhoto={selectedPhoto}
-			></ModalWindow>
+				currentPhoto={photos[photoKeys[currentPhotoIndex]]}
+				onNext={handleNext}
+				onPrev={handlePrev}
+			/>
 		</Box>
 	)
 }
