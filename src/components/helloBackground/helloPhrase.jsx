@@ -1,13 +1,8 @@
 import { Box, Center, Text } from '@chakra-ui/react'
-import { animated, useSpring } from '@react-spring/web'
+import { motion } from 'framer-motion'
 import React from 'react'
 
 const HelloPhrace = () => {
-	const springs = useSpring({
-		from: { x: 0 },
-		to: { x: 100 },
-	})
-
 	// const handleClick = () => {
 	// 	api.start({
 	// 		from: {
@@ -19,54 +14,25 @@ const HelloPhrace = () => {
 	// 	})
 	return (
 		<>
-			{/* <Box
-				as={animated.div}
-				// onClick={handleClick}
-				width={80}
-				height={80}
-				background={'#6d77ff'}
+			<Box
+				as={motion.div}
+				background={'#01010273'}
 				borderRadius={8}
-				{...springs}
-			/> */}
-			<animated.div
-				style={{
-					width: 80,
-					height: 80,
-					background: '#ff6d6d',
-					borderRadius: 8,
-					...springs,
-				}}
-			><Text textAlign="center">Привет!</Text>
-			Вы на сайте, посвещенном моим кошкам,
-			<br />
-			<Text textAlign="center">покрутите колесико вниз, чтобы увидеть их.</Text>
-			</Text>  </animated.div>
+				animate={{ x: [-1000, 50, 0] }}
+			>
+				<Text
+					fontWeight="bold" // делает текст жирным
+					fontSize="30px" // устанавливает размер шрифта
+					color="#c6c6c6"
+				>
+					<Text textAlign="center">Привет!</Text>
+					Вы на сайте, посвещенном моим кошкам,
+					<br />
+					<Text textAlign="center">покрутите колесико вниз, чтобы увидеть их.</Text>
+				</Text>
+			</Box>
 		</>
 	)
 }
-// }
 
 export default HelloPhrace
-
-// <Box
-// display="flex"
-// justifyContent="center"
-// alignItems="center"
-// position="absolute"
-// top="0"
-// left="0"
-// width="100%"
-// height="100vh"
-// >
-// {
-/* <Text
-fontWeight="bold" // делает текст жирным
-fontSize="30px" // устанавливает размер шрифта
-color="#000000"
->
-<Text textAlign="center">Привет!</Text>
-Вы на сайте, посвещенном моим кошкам,
-<br />
-<Text textAlign="center">покрутите колесико вниз, чтобы увидеть их.</Text>
-</Text> */
-// }
