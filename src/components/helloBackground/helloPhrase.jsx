@@ -19,7 +19,7 @@ const HelloPhrace = () => {
 	// 	})
 	return (
 		<>
-			<Box
+			{/* <Box
 				as={animated.div}
 				// onClick={handleClick}
 				width={80}
@@ -27,15 +27,20 @@ const HelloPhrace = () => {
 				background={'#6d77ff'}
 				borderRadius={8}
 				{...springs}
-			/>
-			{/* <animated.div
+			/> */}
+			<animated.div
 				style={{
 					width: 80,
 					height: 80,
 					background: '#ff6d6d',
 					borderRadius: 8,
 					...springs,
-				}} */}
+				}}
+			><Text textAlign="center">Привет!</Text>
+			Вы на сайте, посвещенном моим кошкам,
+			<br />
+			<Text textAlign="center">покрутите колесико вниз, чтобы увидеть их.</Text>
+			</Text>  </animated.div>
 		</>
 	)
 }

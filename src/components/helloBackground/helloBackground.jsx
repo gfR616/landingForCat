@@ -6,7 +6,7 @@ import React, { useEffect } from 'react'
 const HelloBackground = () => {
 	return (
 		<Box h="100vh">
-			{/* <VideoBackground /> */}
+			<VideoBackground />
 			<HelloPhrace />
 		</Box>
 	)
