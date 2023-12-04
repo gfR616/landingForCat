@@ -38,10 +38,10 @@ const ModalWindow = ({ isOpen, onClose, onGivePhoto }) => {
 					</ModalBody>
 
 					<ModalFooter>
-						<Button colorScheme="blue" mr={3}>
+						<Button colorScheme="whiteAlpha" mr={3}>
 							предыдущее
 						</Button>
-						<Button colorScheme="blue" mr={0}>
+						<Button colorScheme="whiteAlpha" mr={0}>
 							следующее
 						</Button>
 					</ModalFooter>
