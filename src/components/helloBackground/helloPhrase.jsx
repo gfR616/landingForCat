@@ -15,6 +15,7 @@ const HelloPhrace = () => {
 	return (
 		<>
 			<Box
+				p={3}
 				as={motion.div}
 				background={'#01010273'}
 				borderRadius={8}

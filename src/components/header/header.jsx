@@ -10,8 +10,8 @@ const Header = () => {
 	}, [])
 
 	return (
-		<Box color="white" bg="#000000">
-			by Roman
+		<Box color="white" bg="#000000" fontWeight="bold" fontStyle={'italic'}>
+			by R616
 		</Box>
 	)
 }
