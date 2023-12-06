@@ -15,15 +15,9 @@ import React from 'react'
 
 const CardOfCats = () => {
 	return (
-		<Box
-			display="flex"
-			alignItems="center"
-			justifyContent="center"
-			w="200wv"
-			border="2px yellow solid"
-		>
+		<Box display="flex" alignItems="center" justifyContent="center" w="200wv">
 			{cardsApi.map((cat, index) => (
-				<Card m="5" key={index} maxW="lg" bg={cat.color}>
+				<Card m="3" key={index} w="md" overflow="hidden" bg={cat.color}>
 					<CardHeader>
 						<Flex spacing="4">
 							<Flex flex="1" gap="4" alignItems="center" flexWrap="wrap">
@@ -37,12 +31,19 @@ const CardOfCats = () => {
 							</Flex>
 						</Flex>
 					</CardHeader>
-					<CardBody>
+					<CardBody h="100px" overflowY="auto">
 						<Text ext as="b">
 							{cat.description}
 						</Text>
 					</CardBody>
-					<Image objectFit="cover" boxSize="550px" src={cat.photo} alt="Kittens" />
+					<Image
+						objectFit="cover"
+						h="55vh"
+						overflow="hidden"
+						src={cat.photo}
+						alt="Kittens"
+					/>
+					<CardFooter h="20px"></CardFooter>
 				</Card>
 			))}
 		</Box>
