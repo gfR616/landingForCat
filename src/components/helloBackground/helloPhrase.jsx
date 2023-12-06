@@ -11,8 +11,8 @@ const HelloPhrace = () => {
 			opacity: 1,
 			scale: 1,
 			transition: {
-				duration: 1,
-				delay: 0.6,
+				duration: 0.5,
+				delay: 0.5,
 			},
 		},
 	}
