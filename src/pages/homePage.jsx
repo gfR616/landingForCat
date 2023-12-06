@@ -12,7 +12,7 @@ const HomePage = () => {
 			<Header />
 			<HelloBackground />
 			<Dummy />
-			<Carusel />
+			{/* <Carusel /> */}
 			<Dummy />
 			<CardsOfCats></CardsOfCats>
 			<Dummy />

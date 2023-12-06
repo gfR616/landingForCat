@@ -3,6 +3,7 @@ import ModalWindow from './modalWindow.jsx'
 import { Box, useDisclosure } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import React, { useEffect, useState } from 'react'
+import { useInView } from 'react-intersection-observer'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -12,6 +13,16 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 const Carusel = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure()
 	const [currentPhotoIndex, setCurrentPhotoIndex] = useState(null)
+	const [ref, inView] = useInView()
+	const variants = {
+		hidden: { opacity: 0 },
+		show: {
+			opacity: 1,
+			transition: {
+				duration: 1,
+			},
+		},
+	}
 
 	useEffect(() => {
 		if (currentPhotoIndex !== null) {
@@ -36,7 +47,12 @@ const Carusel = () => {
 	const photoKeys = Object.keys(photos)
 
 	return (
-		<Box>
+		<motion.div
+			ref={ref}
+			variants={variants}
+			initial="hidden"
+			animate={inView ? 'show' : 'hidden'}
+		>
 			<Box>
 				<Swiper
 					spaceBetween={5}
@@ -63,7 +79,7 @@ const Carusel = () => {
 					onPrev={handlePrev}
 				/>
 			</Box>
-		</Box>
+		</motion.div>
 	)
 }
 

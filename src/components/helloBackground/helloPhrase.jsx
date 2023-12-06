@@ -3,15 +3,6 @@ import { motion } from 'framer-motion'
 import React from 'react'
 
 const HelloPhrace = () => {
-	// const handleClick = () => {
-	// 	api.start({
-	// 		from: {
-	// 			x: 50,
-	// 		},
-	// 		to: {
-	// 			x: 100,
-	// 		},
-	// 	})
 	return (
 		<>
 			<Box
