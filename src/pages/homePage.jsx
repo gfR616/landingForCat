@@ -1,4 +1,4 @@
-import CardOfCats from '../components/cardOfCats/cardOfCats'
+import CardsOfCats from '../components/cardOfCats/cardsOfCats'
 import Carusel from '../components/carusel'
 import Dummy from '../components/dummy'
 import Header from '../components/header/header'
@@ -14,7 +14,7 @@ const HomePage = () => {
 			<Dummy />
 			<Carusel />
 			<Dummy />
-			<CardOfCats></CardOfCats>
+			<CardsOfCats></CardsOfCats>
 			<Dummy />
 		</Box>
 	)

@@ -13,7 +13,7 @@ import {
 } from '@chakra-ui/react'
 import React from 'react'
 
-const CardOfCats = () => {
+const CardsOfCats = () => {
 	return (
 		<Box display="flex" alignItems="center" justifyContent="center" w="200wv">
 			{cardsApi.map((cat, index) => (
@@ -36,12 +36,15 @@ const CardOfCats = () => {
 							{cat.description}
 						</Text>
 					</CardBody>
-					<Image
-						objectFit="cover"
+					<Box
 						h="55vh"
+						w="100%"
 						overflow="hidden"
-						src={cat.photo}
+						bgImage={cat.photo}
 						alt="Kittens"
+						bgRepeat="no-repeat"
+						bgSize="cover"
+						bgPosition="up"
 					/>
 					<CardFooter h="20px"></CardFooter>
 				</Card>
@@ -50,4 +53,4 @@ const CardOfCats = () => {
 	)
 }
 
-export default CardOfCats
+export default CardsOfCats

@@ -29,7 +29,7 @@ const cardsApi = [
 	{
 		name: 'Яшка',
 		profession: 'Важный генерал',
-		photo: 'yashka.jpg',
+		photo: 'yashka.png',
 		description: `Яшке 11 лет. Он большой солидный кот, повидавший жизнь. 
     Конкурирует с Булкой за территорию. `,
 		ava: 'yashkaAva.jpg',
