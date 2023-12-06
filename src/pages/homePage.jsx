@@ -12,9 +12,9 @@ const HomePage = () => {
 			<Header />
 			<HelloBackground />
 			<Dummy />
-			<Carusel />
+			<CardsOfCats />
 			<Dummy />
-			<CardsOfCats></CardsOfCats>
+			<Carusel />
 			<Dummy />
 		</Box>
 	)
