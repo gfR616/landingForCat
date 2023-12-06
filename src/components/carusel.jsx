@@ -1,6 +1,6 @@
 import { photos } from '../api/catsPhoto'
 import ModalWindow from './modalWindow.jsx'
-import { Box, useDisclosure } from '@chakra-ui/react'
+import { Box, Image, useDisclosure } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import React, { useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
@@ -68,7 +68,13 @@ const Carusel = () => {
 				>
 					{photoKeys.map((photoKey, index) => (
 						<SwiperSlide key={index} onClick={() => handleOpenModal(index)}>
-							{<img src={photos[photoKey]} alt={`Photo ${index + 1}`}></img>}
+							{
+								<Image
+									borderRadius="8px"
+									src={photos[photoKey]}
+									alt={`Photo ${index + 1}`}
+								></Image>
+							}
 						</SwiperSlide>
 					))}
 				</Swiper>
