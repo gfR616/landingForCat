@@ -1,3 +1,4 @@
+import CardOfCats from '../components/cardOfCats/cardOfCats'
 import Carusel from '../components/carusel'
 import Dummy from '../components/dummy'
 import Header from '../components/header/header'
@@ -12,6 +13,8 @@ const HomePage = () => {
 			<HelloBackground />
 			<Dummy />
 			<Carusel />
+			<Dummy />
+			<CardOfCats></CardOfCats>
 			<Dummy />
 		</Box>
 	)
