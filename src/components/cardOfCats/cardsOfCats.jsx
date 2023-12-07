@@ -7,20 +7,16 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 const CardsOfCats = () => {
 	const [isMobile, setIsMobile] = useState(false)
-
 	useEffect(() => {
 		const checkMobile = () => {
 			setIsMobile(window.innerWidth <= 600)
 		}
-
 		window.addEventListener('resize', checkMobile)
 		checkMobile() // Call the function initially
-
 		return () => {
 			window.removeEventListener('resize', checkMobile)
 		}
 	}, [])
-
 	return isMobile ? (
 		<Swiper
 			// spaceBetween={1}
@@ -47,5 +43,4 @@ const CardsOfCats = () => {
 		</Box>
 	)
 }
-
 export default CardsOfCats
