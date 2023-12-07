@@ -1,4 +1,4 @@
-import { Box, Center, Text } from '@chakra-ui/react'
+import { Text } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import React from 'react'
 import { useInView } from 'react-intersection-observer'
@@ -28,7 +28,7 @@ const HelloPhrace = () => {
 		>
 			<Text
 				fontWeight="bold" // делает текст жирным
-				fontSize="30px" // устанавливает размер шрифта
+				fontSize={['15px', '20px', '30px']} // устанавливает размер шрифта
 				color="#c6c6c6"
 			>
 				<Text textAlign="center">Привет!</Text>

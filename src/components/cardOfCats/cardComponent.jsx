@@ -1,3 +1,4 @@
+import cardsApi from '../../api/cardsApi'
 import { photos } from '../../api/catsPhoto'
 import ModalWindow from '../modalWindow.jsx'
 import {
@@ -9,17 +10,35 @@ import {
 	CardHeader,
 	Flex,
 	Heading,
+	Image,
 	Text,
 	useDisclosure,
 } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 
 const CardComponent = ({ cat, index }) => {
 	const [ref, inView] = useInView()
 	const { isOpen, onOpen, onClose } = useDisclosure()
 	const [currentPhoto, setCurrentPhoto] = useState(null)
+	const [isMobile, setIsMobile] = useState(false)
+
+	useEffect(() => {
+		const checkMobile = () => {
+			if (window.matchMedia('(max-width: 600px)').matches) {
+				setIsMobile(true)
+			} else {
+				setIsMobile(false)
+			}
+
+			window.addEventListener('resize', checkMobile)
+			checkMobile()
+			return () => {
+				window.removeEventListener('resize', checkMobile)
+			}
+		}
+	}, [])
 
 	const variants = {
 		hidden: { opacity: 0, y: -50 },
@@ -52,7 +71,7 @@ const CardComponent = ({ cat, index }) => {
 				animate={inView ? 'show' : 'hidden'}
 			>
 				<Box display="flex" alignItems="center" justifyContent="center" w="200wv">
-					<Card key={index} w="md" overflow="hidden" bg={cat.color}>
+					<Card key={index} w={['md']} overflow="hidden" bg={cat.color}>
 						<CardHeader>
 							<Flex spacing="4">
 								<Flex flex="1" gap="4" alignItems="center" flexWrap="wrap">

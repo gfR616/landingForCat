@@ -15,6 +15,7 @@ const Carusel = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure()
 	const [currentPhotoIndex, setCurrentPhotoIndex] = useState(null)
 	const [ref, inView] = useInView()
+	const [slidesPerView, setSlidesPerView] = useState(3)
 	const photoKeys = Object.keys(photos)
 
 	const variants = {
@@ -33,6 +34,25 @@ const Carusel = () => {
 			onOpen()
 		}
 	}, [currentPhotoIndex])
+
+	useEffect(() => {
+		const handleResize = () => {
+			if (window.matchMedia('(max-width: 600px)').matches) {
+				setSlidesPerView(1)
+			} else if (window.matchMedia('(max-width: 900px)').matches) {
+				setSlidesPerView(2)
+			} else {
+				setSlidesPerView(3)
+			}
+		}
+
+		window.addEventListener('resize', handleResize)
+		handleResize() // Call the function initially
+
+		return () => {
+			window.removeEventListener('resize', handleResize)
+		}
+	}, [])
 
 	const handleOpenModal = (photoIndex) => {
 		setCurrentPhotoIndex(photoIndex)
@@ -59,7 +79,7 @@ const Carusel = () => {
 				<Swiper
 					grabCursor={true}
 					spaceBetween={5}
-					slidesPerView={3}
+					slidesPerView={slidesPerView}
 					autoplay={{ delay: 3000, disableOnInteraction: false }}
 					pagination={{
 						clickable: true,
