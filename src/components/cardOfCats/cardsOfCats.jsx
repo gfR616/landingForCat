@@ -1,5 +1,5 @@
 import cardsApi from '../../api/cardsApi'
-import CardComponent from './cardsComponent'
+import CardComponent from './cardComponent'
 import { Box } from '@chakra-ui/react'
 import React from 'react'
 

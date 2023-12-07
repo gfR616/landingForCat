@@ -84,6 +84,7 @@ const Carusel = () => {
 					currentPhoto={photos[photoKeys[currentPhotoIndex]]}
 					onNext={handleNext}
 					onPrev={handlePrev}
+					navigation={true}
 				/>
 			</Box>
 		</motion.div>
