@@ -29,7 +29,7 @@ const ModalWindow = ({ isOpen, onClose, currentPhoto, onNext, onPrev, navigation
 						display: 'flex',
 						justifyContent: 'center',
 						alignItems: 'center',
-						maxHeight: '100vh',
+						height: '98vh',
 						backgroundColor: '#000000b7',
 					}}
 				>
@@ -54,12 +54,9 @@ const ModalWindow = ({ isOpen, onClose, currentPhoto, onNext, onPrev, navigation
 								}}
 								colorScheme="whiteAlpha"
 								bg="#edebeb14"
-								h="100vh"
-								w="25vh"
-								// borderRadius={10}
-								border-top-left-radius={0}
-								border-bottom-right-radius={0}
-								_focus={{ outline: 'none' }}
+								h="98vh"
+								w="20vh"
+								borderRadius="20px 0 0 20px"
 							>
 								Назад
 							</Button>
@@ -70,7 +67,7 @@ const ModalWindow = ({ isOpen, onClose, currentPhoto, onNext, onPrev, navigation
 							}}
 							src={currentPhoto}
 							alt="Selected"
-							style={{ maxHeight: '100vh', width: 'auto' }}
+							style={{ height: '98vh', width: 'auto' }}
 						/>
 						{navigationButtons && (
 							<Button
@@ -80,9 +77,9 @@ const ModalWindow = ({ isOpen, onClose, currentPhoto, onNext, onPrev, navigation
 								}}
 								colorScheme="whiteAlpha"
 								bg="#edebeb14"
-								h="100vh"
-								w="25vh"
-								borderRadius={0}
+								h="98vh"
+								w="20vh"
+								borderRadius="0 20px 20px 0"
 							>
 								Вперед
 							</Button>
