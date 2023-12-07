@@ -44,7 +44,7 @@ const CardComponent = ({ cat, index }) => {
 	}
 
 	return (
-		<Box>
+		<Box m={3}>
 			<motion.div
 				ref={ref}
 				variants={variants}
@@ -52,7 +52,7 @@ const CardComponent = ({ cat, index }) => {
 				animate={inView ? 'show' : 'hidden'}
 			>
 				<Box display="flex" alignItems="center" justifyContent="center" w="200wv">
-					<Card key={index} m="3" w="md" overflow="hidden" bg={cat.color}>
+					<Card key={index} w="md" overflow="hidden" bg={cat.color}>
 						<CardHeader>
 							<Flex spacing="4">
 								<Flex flex="1" gap="4" alignItems="center" flexWrap="wrap">

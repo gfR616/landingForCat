@@ -1,10 +1,11 @@
-import { photos } from '../api/catsPhoto'
-import ModalWindow from './modalWindow.jsx'
+import { photos } from '../../api/catsPhoto'
+import ModalWindow from '../modalWindow.jsx'
 import { Box, Image, useDisclosure } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import React, { useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 import 'swiper/css'
+import 'swiper/css/effect-coverflow'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
@@ -14,6 +15,8 @@ const Carusel = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure()
 	const [currentPhotoIndex, setCurrentPhotoIndex] = useState(null)
 	const [ref, inView] = useInView()
+	const photoKeys = Object.keys(photos)
+
 	const variants = {
 		hidden: { opacity: 0 },
 		show: {
@@ -45,8 +48,6 @@ const Carusel = () => {
 		)
 	}
 
-	const photoKeys = Object.keys(photos)
-
 	return (
 		<motion.div
 			ref={ref}
@@ -54,10 +55,11 @@ const Carusel = () => {
 			initial="hidden"
 			animate={inView ? 'show' : 'hidden'}
 		>
-			<Box>
+			<Box m={5}>
 				<Swiper
+					grabCursor={true}
 					spaceBetween={5}
-					slidesPerView={4}
+					slidesPerView={3}
 					autoplay={{ delay: 3000, disableOnInteraction: false }}
 					pagination={{
 						clickable: true,

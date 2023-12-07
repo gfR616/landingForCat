@@ -8,6 +8,7 @@ import {
 	ModalOverlay,
 } from '@chakra-ui/react'
 import React, { useRef, useState } from 'react'
+import { SlArrowLeft, SlArrowRight } from 'react-icons/sl'
 
 const ModalWindow = ({ isOpen, onClose, currentPhoto, onNext, onPrev, navigation }) => {
 	const [navigationButtons, setNavigationButtons] = useState(navigation)
@@ -33,6 +34,7 @@ const ModalWindow = ({ isOpen, onClose, currentPhoto, onNext, onPrev, navigation
 						backgroundColor: '#000000b7',
 					}}
 				>
+					{/* пустой невидимый элемент, чтобы перевести на него фокус чакры */}
 					<div
 						ref={initialRef}
 						tabIndex="-1"
@@ -58,7 +60,7 @@ const ModalWindow = ({ isOpen, onClose, currentPhoto, onNext, onPrev, navigation
 								w="20vh"
 								borderRadius="20px 0 0 20px"
 							>
-								Назад
+								<SlArrowLeft size={35} />
 							</Button>
 						)}
 						<img
@@ -81,7 +83,7 @@ const ModalWindow = ({ isOpen, onClose, currentPhoto, onNext, onPrev, navigation
 								w="20vh"
 								borderRadius="0 20px 20px 0"
 							>
-								Вперед
+								<SlArrowRight size={35} />
 							</Button>
 						)}
 					</ModalBody>

@@ -1,5 +1,5 @@
 import CardsOfCats from '../components/cardOfCats/cardsOfCats'
-import Carusel from '../components/carusel'
+import Carusel from '../components/carusel/carusel'
 import Dummy from '../components/dummy'
 import Header from '../components/header/header'
 import HelloBackground from '../components/helloBackground/helloBackground'
@@ -8,7 +8,7 @@ import React from 'react'
 
 const HomePage = () => {
 	return (
-		<Box bg="black">
+		<Box bg="#041b35">
 			<Header />
 			<HelloBackground />
 			<Dummy />

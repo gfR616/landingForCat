@@ -10,7 +10,7 @@ const Header = () => {
 	}, [])
 
 	return (
-		<Box color="white" bg="#000000" fontWeight="bold" fontStyle={'italic'}>
+		<Box color="white" bg="#041b35" fontWeight="bold" fontStyle={'italic'}>
 			by R616
 		</Box>
 	)
