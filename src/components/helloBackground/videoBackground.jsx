@@ -1,5 +1,4 @@
-import HelloPhrace from './helloPhrase'
-import { Box } from '@chakra-ui/react'
+import { Box, Text } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import React from 'react'
 
