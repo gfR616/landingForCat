@@ -75,7 +75,7 @@ const Carusel = () => {
 			initial="hidden"
 			animate={inView ? 'show' : 'hidden'}
 		>
-			<Box m={5}>
+			<Box m={3}>
 				<Swiper
 					grabCursor={true}
 					spaceBetween={5}

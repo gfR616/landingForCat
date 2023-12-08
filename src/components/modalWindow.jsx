@@ -2,6 +2,7 @@ import { photos } from '../api/catsPhoto'
 import {
 	Box,
 	Button,
+	Image,
 	Modal,
 	ModalBody,
 	ModalContent,
@@ -21,18 +22,16 @@ const ModalWindow = ({ isOpen, onClose, currentPhoto, onNext, onPrev, navigation
 				onClose={onClose}
 				size="full"
 				bg="black"
+				p="0px"
 			>
 				<ModalOverlay />
-
 				<ModalContent
 					onClick={onClose}
-					style={{
-						display: 'flex',
-						justifyContent: 'center',
-						alignItems: 'center',
-						height: '98vh',
-						backgroundColor: '#000000b7',
-					}}
+					display="flex"
+					justifyContent="center"
+					alignItems="center"
+					height="98vh"
+					backgroundColor="#000000b7"
 				>
 					{/* пустой невидимый элемент, чтобы перевести на него фокус чакры */}
 					<div
@@ -41,13 +40,7 @@ const ModalWindow = ({ isOpen, onClose, currentPhoto, onNext, onPrev, navigation
 						aria-hidden="true"
 						style={{ position: 'absolute', top: '-5000px' }}
 					/>
-					<ModalBody
-						style={{
-							display: 'flex',
-							justifyContent: 'space-between',
-							alignItems: 'center',
-						}}
-					>
+					<ModalBody display="flex" justifyContent="space-between" alignItems="center">
 						{navigationButtons && (
 							<Button
 								onClick={(e) => {
@@ -59,17 +52,30 @@ const ModalWindow = ({ isOpen, onClose, currentPhoto, onNext, onPrev, navigation
 								h="98vh"
 								w="20vh"
 								borderRadius="20px 0 0 20px"
+								sx={{
+									'@media (max-width: 965px)': {
+										display: 'none',
+									},
+								}}
 							>
 								<SlArrowLeft size={35} />
 							</Button>
 						)}
-						<img
+						<Image
 							onClick={(e) => {
 								e.stopPropagation()
 							}}
 							src={currentPhoto}
 							alt="Selected"
-							style={{ height: '98vh', width: 'auto' }}
+							h="98vh"
+							w="auto"
+							objectFit="cover"
+							sx={{
+								'@media (max-width: 965px)': {
+									h: 'auto',
+									w: '100vw',
+								},
+							}}
 						/>
 						{navigationButtons && (
 							<Button
@@ -82,6 +88,11 @@ const ModalWindow = ({ isOpen, onClose, currentPhoto, onNext, onPrev, navigation
 								h="98vh"
 								w="20vh"
 								borderRadius="0 20px 20px 0"
+								sx={{
+									'@media (max-width: 965px)': {
+										display: 'none',
+									},
+								}}
 							>
 								<SlArrowRight size={35} />
 							</Button>
