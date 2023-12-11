@@ -1,7 +1,7 @@
 import cardsApi from '../../api/cardsApi'
 import CardComponent from './cardComponent'
-import { Box, Flex, Grid } from '@chakra-ui/react'
-import React, { useEffect, useState } from 'react'
+import { Box, Grid } from '@chakra-ui/react'
+import React from 'react'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
