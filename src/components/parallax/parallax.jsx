@@ -15,7 +15,7 @@ const ParallaxEffect = () => {
 	return (
 		<ParallaxProvider>
 			<Parallax>
-				<Box h="300vh" overflow="hidden">
+				<Box h="auto+5px" overflow="hidden" p={10}>
 					<Grid gridTemplateColumns={'1fr 1fr 1fr'} gap="2vw">
 						<GridItem>
 							<ParallaxImage2 />
