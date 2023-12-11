@@ -1,5 +1,3 @@
-import cardsApi from '../../api/cardsApi'
-import { photos } from '../../api/catsPhoto'
 import ModalWindow from '../modalWindow.jsx'
 import {
 	Avatar,
