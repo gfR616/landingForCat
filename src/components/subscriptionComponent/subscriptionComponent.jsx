@@ -12,9 +12,9 @@ const SubscriptionComponent = () => {
 		>
 			<Text
 				fontWeight="bold"
-				fontSize={['15px', '20px', '30px']}
+				fontSize={['10px', '15px', '30px']}
 				color="#070505"
-				textShadow="1px 1px #c9c9c9"
+				textShadow="1px 1px #8d8b8b"
 			>
 				Хочешь больше контента? Подпишись на телеграмм канал моих кошек!
 			</Text>

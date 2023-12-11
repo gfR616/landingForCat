@@ -4,18 +4,19 @@ import { useParallax } from 'react-scroll-parallax'
 
 const ParallaxImage = () => {
 	const parallax = useParallax({
-		speed: 40,
+		easing: 'easeOutQuad',
+		translateY: [1000, 0],
+		translateX: [150, 150],
 	})
 
 	return (
 		<Box
+			w="20vh"
+			h="20vh"
 			ref={parallax.ref}
 			display="flex"
 			flexDirection="row"
 			position="absolute"
-			top="250vh"
-			left="80vw"
-			w="auto"
 		>
 			<Center>
 				<Text
@@ -28,16 +29,15 @@ const ParallaxImage = () => {
 				>
 					эт я →
 				</Text>
-			</Center>
 
-			<Image
-				w="auto"
-				objectFit="cover"
-				src="mem.jpg"
-				borderRadius={180}
-				position="relative"
-				boxShadow="0 0 20px 20px rgba(0, 0, 0, 0.5)"
-			/>
+				<Image
+					objectFit="cover"
+					src="mem.jpg"
+					borderRadius={180}
+					position="relative"
+					boxShadow="0 0 20px 20px rgba(0, 0, 0, 0.5)"
+				/>
+			</Center>
 		</Box>
 	)
 }
