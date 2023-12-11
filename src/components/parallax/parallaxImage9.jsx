@@ -11,7 +11,7 @@ const ParallaxImage9 = () => {
 	return (
 		<Image
 			ref={parallax.ref}
-			src="mem9.jpg"
+			src="mem9.webm"
 			borderRadius={5}
 			position="relative"
 			zIndex="0"

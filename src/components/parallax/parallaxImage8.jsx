@@ -13,7 +13,7 @@ const ParallaxImage8 = () => {
 		<Image
 			className="spinner"
 			ref={parallax.ref}
-			src="mem8.jpg"
+			src="mem8.webm"
 			borderRadius={5}
 			position="relative"
 			zIndex="0"

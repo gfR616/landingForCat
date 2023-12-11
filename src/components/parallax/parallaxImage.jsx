@@ -25,7 +25,7 @@ const ParallaxImage = () => {
 
 				<Image
 					objectFit="cover"
-					src="mem.jpg"
+					src="mem.webm"
 					borderRadius={180}
 					position="relative"
 					boxShadow="0 0 20px 20px rgba(0, 0, 0, 0.5)"
