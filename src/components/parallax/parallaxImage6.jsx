@@ -2,29 +2,24 @@ import { Box, Image } from '@chakra-ui/react'
 import React from 'react'
 import { useParallax } from 'react-scroll-parallax'
 
-const ParallaxImage1 = () => {
+const ParallaxImage6 = () => {
 	const parallax = useParallax({
-		speed: -28,
+		easing: 'easeOutQuad',
+		translateY: [10, 50],
+		translateX: [0, 0],
 	})
 
 	return (
-		<Box
-			boxShadow="0 0 20px 1px rgb(242, 246, 223)"
-			as={'video'}
+		<Image
+			className="spinner"
 			ref={parallax.ref}
-			autoPlay
-			loop
-			muted
-			src="mem6.webm"
-			borderRadius={180}
-			position="absolute"
-			top="-500"
-			left="0"
-			right="0"
-			bottom="50"
-			margin="auto"
+			src="mem6.jpg"
+			borderRadius={5}
+			position="relative"
+			zIndex="0"
+			boxShadow="5px 5px 20px 10px rgba(0, 0, 0, 0.5)"
 		/>
 	)
 }
 
-export default ParallaxImage1
+export default ParallaxImage6

@@ -4,7 +4,7 @@ import { useParallax } from 'react-scroll-parallax'
 
 const ParallaxImage = () => {
 	const parallax = useParallax({
-		speed: -15,
+		speed: 40,
 	})
 
 	return (
@@ -13,7 +13,7 @@ const ParallaxImage = () => {
 			display="flex"
 			flexDirection="row"
 			position="absolute"
-			top="150vh"
+			top="250vh"
 			left="80vw"
 			w="auto"
 		>

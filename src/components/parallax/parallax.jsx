@@ -1,25 +1,23 @@
 import ParallaxImage from './parallaxImage'
-import ParallaxImage1 from './parallaxImage1'
 import ParallaxImage2 from './parallaxImage2'
 import ParallaxImage3 from './parallaxImage3'
 import ParallaxImage4 from './parallaxImage4'
-import { Box, Grid, GridItem, Image, Text } from '@chakra-ui/react'
+import ParallaxImage5 from './parallaxImage5'
+import ParallaxImage6 from './parallaxImage6'
+import ParallaxImage7 from './parallaxImage7'
+import ParallaxImage8 from './parallaxImage8'
+import ParallaxImage9 from './parallaxImage9'
+import { Box, Grid, GridItem } from '@chakra-ui/react'
 import React from 'react'
-import { Parallax, ParallaxProvider, useParallax } from 'react-scroll-parallax'
+import { Parallax, ParallaxProvider } from 'react-scroll-parallax'
 
 const ParallaxEffect = () => {
 	return (
 		<ParallaxProvider>
 			<Parallax>
-				<Box
-					h="300vh"
-					overflow="hidden"
-					backgroundImage="url('catBG.jpg')"
-					backgroundSize="cover"
-					backgroundPosition="center"
-					borderRadius={3}
-				>
-					<Grid gridTemplateColumns={'1fr 1fr'} gap="30vw">
+				<Box h="300vh" overflow="hidden">
+					<Grid gridTemplateColumns={'1fr 1fr 1fr'} gap="2vw">
+						<ParallaxImage />
 						<GridItem>
 							<ParallaxImage2 />
 						</GridItem>
@@ -29,8 +27,21 @@ const ParallaxEffect = () => {
 						<GridItem>
 							<ParallaxImage4 />
 						</GridItem>
-						{/* <ParallaxImage3 />
-						<ParallaxImage4 /> */}
+						<GridItem>
+							<ParallaxImage5 />
+						</GridItem>
+						<GridItem>
+							<ParallaxImage6 />
+						</GridItem>
+						<GridItem>
+							<ParallaxImage7 />
+						</GridItem>
+						<GridItem>
+							<ParallaxImage8 />
+						</GridItem>
+						<GridItem>
+							<ParallaxImage9 />
+						</GridItem>
 					</Grid>
 				</Box>
 			</Parallax>

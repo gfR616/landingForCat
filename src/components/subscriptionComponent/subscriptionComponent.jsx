@@ -4,7 +4,7 @@ import React from 'react'
 const SubscriptionComponent = () => {
 	return (
 		<Box
-			h="100vh"
+			h="120vh"
 			display="flex"
 			flexDirection="column"
 			alignItems="center"
@@ -13,13 +13,14 @@ const SubscriptionComponent = () => {
 			<Text
 				fontWeight="bold"
 				fontSize={['15px', '20px', '30px']}
-				color="#c6c6c6"
-				textShadow="1px 1px #050e13"
+				color="#070505"
+				textShadow="1px 1px #c9c9c9"
 			>
 				Хочешь больше контента? Подпишись на телеграмм канал моих кошек!
 			</Text>
 
-			<Box mt={5}
+			<Box
+				m={12}
 				boxShadow="0 0 20px 1px rgb(242, 246, 223)"
 				as={'video'}
 				autoPlay
@@ -27,12 +28,11 @@ const SubscriptionComponent = () => {
 				muted
 				src="mem1.webm"
 				borderRadius={180}
-				// position="absolute"
 			/>
 
 			<Button
-				m={8}
-				colorScheme="telegram"
+				m={12}
+				colorScheme="cyan"
 				onClick={() => window.open('https://t.me/r123616r', '_blank')}
 			>
 				Подписаться!

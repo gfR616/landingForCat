@@ -17,7 +17,7 @@ const HomePage = () => {
 			<Dummy />
 			<Carusel />
 			<Dummy />
-			{/* <ParallaxEffect /> */}
+			<ParallaxEffect />
 			<SubscriptionComponent />
 			{/* <MiniGame /> */}
 		</Box>
