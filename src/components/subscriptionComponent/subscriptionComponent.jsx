@@ -1,5 +1,6 @@
-import { Box, Button, Center, Image, Text } from '@chakra-ui/react'
+import { Box, Button, Text } from '@chakra-ui/react'
 import React from 'react'
+import { FaTelegram } from 'react-icons/fa6'
 
 const SubscriptionComponent = () => {
 	return (
@@ -32,10 +33,12 @@ const SubscriptionComponent = () => {
 
 			<Button
 				m={12}
-				colorScheme="cyan"
+				colorScheme="orange"
+				size="lg"
 				onClick={() => window.open('https://t.me/r123616r', '_blank')}
 			>
-				Подписаться!
+				<FaTelegram size={30} />
+				&nbsp;&nbsp;&nbsp;Подписаться!
 			</Button>
 		</Box>
 	)
