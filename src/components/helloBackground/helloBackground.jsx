@@ -18,7 +18,6 @@ const HelloBackground = () => {
 			>
 				By gfr616
 			</Text>
-			<VideoBackground />
 			<Center height="100vh" width="100%">
 				<Box display="flex" position="absolute">
 					<HelloPhrace />
