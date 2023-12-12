@@ -16,9 +16,9 @@ const HomePage = () => {
 		setVideoLoaded(true)
 	}
 	return (
-		<>
+		<Box h="auto" overflow="hidden">
 			<VideoBackground onVideoLoadedChecker={handleVideoLoadedChecker} />
-			{videoLoaded ? (
+			{videoLoaded && (
 				<Box
 					h="auto"
 					overflow="hidden"
@@ -33,10 +33,8 @@ const HomePage = () => {
 					<ParallaxEffect />
 					<SubscriptionComponent />
 				</Box>
-			) : (
-				<LoadingScreen />
 			)}
-		</>
+		</Box>
 	)
 }
 
