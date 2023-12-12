@@ -4,7 +4,6 @@ import { useParallax } from 'react-scroll-parallax'
 
 const ParallaxImage = () => {
 	const parallax = useParallax({
-		// easing: 'easeOutQuad',
 		translateY: [250, -20],
 		translateX: [20, 20],
 	})
@@ -25,7 +24,8 @@ const ParallaxImage = () => {
 
 				<Image
 					objectFit="cover"
-					src="mem.webm"
+					src="mem.webp"
+					alt="mem"
 					borderRadius={180}
 					position="relative"
 					boxShadow="0 0 20px 20px rgba(0, 0, 0, 0.5)"

@@ -77,6 +77,7 @@ const CardComponent = ({ cat, index }) => {
 										size="2xl"
 										name={cat.name}
 										src={cat.ava}
+										alt={cat.ava}
 										onClick={handleAvaClick}
 									/>
 									<Box>
@@ -96,7 +97,7 @@ const CardComponent = ({ cat, index }) => {
 							w="100%"
 							overflow="hidden"
 							bgImage={cat.photo}
-							alt="Kittens"
+							alt={cat.photo}
 							bgRepeat="no-repeat"
 							bgSize="cover"
 							bgPosition="up"

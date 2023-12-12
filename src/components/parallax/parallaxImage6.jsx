@@ -13,7 +13,8 @@ const ParallaxImage6 = () => {
 		<Image
 			className="spinner"
 			ref={parallax.ref}
-			src="mem6.webm"
+			src="mem6.webp"
+			alt="mem6"
 			borderRadius={5}
 			position="relative"
 			zIndex="0"

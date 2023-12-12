@@ -66,7 +66,7 @@ const ModalWindow = ({ isOpen, onClose, currentPhoto, onNext, onPrev, navigation
 								e.stopPropagation()
 							}}
 							src={currentPhoto}
-							alt="Selected"
+							alt={currentPhoto}
 							h="98vh"
 							w="auto"
 							objectFit="cover"

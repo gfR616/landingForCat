@@ -19,7 +19,7 @@ const VideoBackground = () => {
 		<motion.div variants={variants} animate={'show'} ref={ref} initial="hidden">
 			<Box position="absolute" height="100vh" width="100%">
 				<Box as="video" autoPlay loop muted height="100%" width="100%" objectFit="cover">
-					<source src="head.webm" type="video/webm" />
+					<source src="./head.webm" type="video/webm" />
 				</Box>
 			</Box>
 		</motion.div>

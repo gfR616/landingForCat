@@ -47,7 +47,7 @@ const Carusel = () => {
 		}
 
 		window.addEventListener('resize', handleResize)
-		handleResize() // Call the function initially
+		handleResize() 
 
 		return () => {
 			window.removeEventListener('resize', handleResize)
