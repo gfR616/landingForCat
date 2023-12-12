@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/landingForCat/static/css/main.c40d890e.css",
-    "main.js": "/landingForCat/static/js/main.767af8ac.js",
+    "main.js": "/landingForCat/static/js/main.27210b3d.js",
     "index.html": "/landingForCat/index.html",
     "main.c40d890e.css.map": "/landingForCat/static/css/main.c40d890e.css.map",
-    "main.767af8ac.js.map": "/landingForCat/static/js/main.767af8ac.js.map"
+    "main.27210b3d.js.map": "/landingForCat/static/js/main.27210b3d.js.map"
   },
   "entrypoints": [
     "static/css/main.c40d890e.css",
-    "static/js/main.767af8ac.js"
+    "static/js/main.27210b3d.js"
   ]
 }
