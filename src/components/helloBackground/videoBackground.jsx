@@ -1,10 +1,11 @@
 import { Box, Text } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 
 const VideoBackground = () => {
 	const [ref, inView] = useInView()
+	const [videoLoaded, setVideoLoaded] = useState(false)
 	const variants = {
 		hidden: { opacity: 0 },
 		show: {
@@ -18,7 +19,16 @@ const VideoBackground = () => {
 	return (
 		<motion.div variants={variants} animate={'show'} ref={ref} initial="hidden">
 			<Box position="absolute" height="100vh" width="100%">
-				<Box as="video" autoPlay loop muted height="100%" width="100%" objectFit="cover">
+				<Box
+					as="video"
+					autoPlay
+					loop
+					muted
+					height="100%"
+					width="100%"
+					objectFit="cover"
+					onLoadedData={() => setVideoLoaded(true)}
+				>
 					<source src="./head.webm" type="video/webm" />
 				</Box>
 			</Box>
