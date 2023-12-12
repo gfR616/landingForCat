@@ -10,18 +10,16 @@ import React from 'react'
 
 const HomePage = () => {
 	return (
-		{ VideoBackground } && (
-			<Box bgImage="linear-gradient(90deg, #282644, #da313f, #ffc371)">
-				<HelloBackground />
-				<Dummy />
-				<CardsOfCats />
-				<Dummy />
-				<Carusel />
-				<Dummy />
-				<ParallaxEffect />
-				<SubscriptionComponent />
-			</Box>
-		)
+		<Box bgImage="linear-gradient(90deg, #282644, #da313f, #ffc371)">
+			<HelloBackground />
+			<Dummy />
+			<CardsOfCats />
+			<Dummy />
+			<Carusel />
+			<Dummy />
+			<ParallaxEffect />
+			<SubscriptionComponent />
+		</Box>
 	)
 }
 

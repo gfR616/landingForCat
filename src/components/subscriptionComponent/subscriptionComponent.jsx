@@ -33,7 +33,7 @@ const SubscriptionComponent = () => {
 
 			<Button
 				m={12}
-				colorScheme="orange"
+				colorScheme="telegram"
 				size="lg"
 				onClick={() => window.open('https://t.me/r123616r', '_blank')}
 			>
