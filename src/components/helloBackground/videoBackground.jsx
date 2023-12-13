@@ -4,20 +4,7 @@ import React from 'react'
 import { useInView } from 'react-intersection-observer'
 
 const VideoBackground = ({ onVideoLoadedChecker }) => {
-	// const [ref, inView] = useInView()
-
-	// const variants = {
-	// 	hidden: { opacity: 0 },
-	// 	show: {
-	// 		opacity: 1,
-	// 		transition: {
-	// 			duration: 0.5,
-	// 			delay: 0,
-	// 		},
-	// 	},
-	// }
 	return (
-		// <motion.div variants={variants} animate={'show'} ref={ref} initial="hidden">
 		<Box position="absolute" height="100vh" width="100%">
 			<Box
 				as="video"
@@ -32,7 +19,6 @@ const VideoBackground = ({ onVideoLoadedChecker }) => {
 				<source src="./head.webm" type="video/webm" />
 			</Box>
 		</Box>
-		// </motion.div>
 	)
 }
 

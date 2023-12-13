@@ -7,8 +7,8 @@ const HelloBackground = () => {
 	return (
 		<Box h="100vh">
 			<Text
-				m={5}
-				fontSize="25px"
+				m={2}
+				fontSize={['15px', '20px', '25px']}
 				color="#00000092"
 				fontWeight="bold"
 				fontStyle={'italic'}

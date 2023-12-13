@@ -1,24 +1,24 @@
-import { Box, Image } from '@chakra-ui/react'
+import { Image } from '@chakra-ui/react'
 import React from 'react'
 import { useParallax } from 'react-scroll-parallax'
 
 const ParallaxImage6 = () => {
 	const parallax = useParallax({
 		easing: 'easeOutQuad',
-		translateY: [10, 50],
-		translateX: [0, 0],
+		translateY: [50, -30],
 	})
 
 	return (
 		<Image
-			className="spinner"
+			boxSize="800px"
+			objectFit="cover"
 			ref={parallax.ref}
 			src="mem6.webp"
 			alt="mem6"
 			borderRadius={5}
 			position="relative"
 			zIndex="0"
-			boxShadow="5px 5px 20px 10px rgba(0, 0, 0, 0.5)"
+			boxShadow="10px 10px 5px 5px rgba(69, 15, 80, 0.5)"
 		/>
 	)
 }

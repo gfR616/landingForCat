@@ -1,4 +1,4 @@
-import ParallaxImage from './parallaxImage'
+import ParallaxImage1 from './parallaxImage1'
 import ParallaxImage2 from './parallaxImage2'
 import ParallaxImage3 from './parallaxImage3'
 import ParallaxImage4 from './parallaxImage4'
@@ -15,8 +15,11 @@ const ParallaxEffect = () => {
 	return (
 		<ParallaxProvider>
 			<Parallax>
-				<Box h="auto" overflow="hidden" padding="1.8vw">
+				<Box h="auto" overflow="hidden" p="1.8vw">
 					<Grid gridTemplateColumns={'1fr 1fr 1fr'} gap="2vw">
+						<GridItem>
+							<ParallaxImage1 />
+						</GridItem>
 						<GridItem>
 							<ParallaxImage2 />
 						</GridItem>
@@ -40,9 +43,6 @@ const ParallaxEffect = () => {
 						</GridItem>
 						<GridItem>
 							<ParallaxImage9 />
-						</GridItem>
-						<GridItem>
-							<ParallaxImage />
 						</GridItem>
 					</Grid>
 				</Box>

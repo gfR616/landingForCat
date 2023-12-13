@@ -1,4 +1,3 @@
-import { photos } from '../api/catsPhoto'
 import {
 	Box,
 	Button,

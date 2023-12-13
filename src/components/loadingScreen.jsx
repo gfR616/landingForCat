@@ -1,5 +1,5 @@
-import { Box, Center } from '@chakra-ui/react'
-import React, { CSSProperties, useState } from 'react'
+import { Box } from '@chakra-ui/react'
+import React, { useState } from 'react'
 import BeatLoader from 'react-spinners/BeatLoader'
 
 const LoadingScreen = () => {
