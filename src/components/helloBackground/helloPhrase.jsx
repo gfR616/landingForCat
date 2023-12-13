@@ -27,8 +27,8 @@ const HelloPhrace = () => {
 			}}
 		>
 			<Box
-				fontWeight="bold" // делает текст жирным (как твоя мамаша)
-				fontSize={['15px', '20px', '30px']} // устанавливает размер шрифта
+				fontWeight="bold" 
+				fontSize={['15px', '20px', '30px']}
 				color="#c6c6c6"
 				textShadow="1px 1px#1030d1"
 			>

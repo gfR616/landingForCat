@@ -11,7 +11,6 @@ import React, { useState } from 'react'
 
 const HomePage = () => {
 	const [videoLoaded, setVideoLoaded] = useState(false)
-	console.log(videoLoaded)
 	const handleVideoLoadedChecker = () => {
 		setVideoLoaded(true)
 	}
@@ -30,7 +29,16 @@ const HomePage = () => {
 					<Dummy />
 					<Carusel />
 					<Dummy />
-					<ParallaxEffect />
+
+					<Box
+						sx={{
+							'@media (max-width: 965px)': {
+								display: 'none',
+							},
+						}}
+					>
+						<ParallaxEffect />
+					</Box>
 					<SubscriptionComponent />
 				</Box>
 			)}

@@ -68,8 +68,14 @@ const CardComponent = ({ cat, index }) => {
 				initial="hidden"
 				animate={inView ? 'show' : 'hidden'}
 			>
-				<Box display="flex" alignItems="center" justifyContent="center" w="200wv">
-					<Card key={index} w="md" overflow="hidden" bg={cat.color}>
+				<Box
+					display="flex"
+					alignItems="center"
+					justifyContent="center"
+					w="200wv"
+					bgSize="100% 100%"
+				>
+					<Card key={index} w={'md'} overflow="hidden" bg={cat.color}>
 						<CardHeader>
 							<Flex spacing="4">
 								<Flex flex="1" gap="4" alignItems="center" flexWrap="wrap">
@@ -97,13 +103,13 @@ const CardComponent = ({ cat, index }) => {
 							w="100%"
 							overflow="hidden"
 							bgImage={cat.photo}
+							bgSize="100%"
 							alt={cat.photo}
 							bgRepeat="no-repeat"
-							bgSize="cover"
 							bgPosition="up"
 							onClick={handlePhotoClick}
 						/>
-						<CardFooter h="20px"></CardFooter>
+						<CardFooter></CardFooter>
 					</Card>
 				</Box>
 			</motion.div>

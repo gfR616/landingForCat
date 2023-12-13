@@ -9,17 +9,19 @@ const ParallaxImage1 = () => {
 	})
 
 	return (
-		<Image
-			boxSize={['200px', '350px', '500px', '600px', '800px']}
-			objectFit="cover"
-			ref={parallax.ref}
-			src="mem1.webp"
-			alt="mem1"
-			borderRadius={5}
-			position="relative"
-			zIndex="1"
-			boxShadow="10px 10px 5px 5px rgba(69, 15, 80, 0.5)"
-		/>
+		<>
+			<Image
+				boxSize={['200px', '350px', '500px', '600px', '800px']}
+				objectFit="cover"
+				ref={parallax.ref}
+				src="mem1.webp"
+				alt="mem1"
+				borderRadius={5}
+				position="relative"
+				zIndex="1"
+				boxShadow="10px 10px 5px 5px rgba(69, 15, 80, 0.5)"
+			/>
+		</>
 	)
 }
 

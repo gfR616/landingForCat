@@ -1,23 +1,27 @@
-import { Box, Button, Text } from '@chakra-ui/react'
+import { Box, Button, Center, Link, Text } from '@chakra-ui/react'
 import React from 'react'
 import { FaTelegram } from 'react-icons/fa6'
 
 const SubscriptionComponent = () => {
 	return (
 		<Box
-			h="120vh"
+			h="100vh"
 			display="flex"
 			flexDirection="column"
 			alignItems="center"
 			justifyContent="center"
+			position="relative"
 		>
 			<Text
 				fontWeight="bold"
-				fontSize={['10px', '15px', '30px']}
+				fontSize={['10px', '10px', '15px', '20px', '30px']}
 				color="#070505"
 				textShadow="1px 1px #8d8b8b"
 			>
-				Хочешь больше контента? Подпишись на телеграмм канал моих кошек!
+				<Center>
+					Хочешь больше контента? <br />
+				</Center>
+				Подпишись на телеграмм канал моих кошек!
 			</Text>
 
 			<Box
@@ -40,6 +44,15 @@ const SubscriptionComponent = () => {
 				<FaTelegram size={30} />
 				&nbsp;&nbsp;&nbsp;Подписаться!
 			</Button>
+			<Link
+				color="teal.500"
+				to="https://gfr616.github.io/landingForCat/"
+				position="absolute"
+				right={10}
+				bottom={5}
+			>
+				Репозиторий проекта на GitHub
+			</Link>
 		</Box>
 	)
 }
