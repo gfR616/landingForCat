@@ -9,7 +9,7 @@ const ParallaxImage8 = () => {
 	})
 	return (
 		<Image
-			boxSize="650px"
+			boxSize={['150px', '300px', '450px', '550px', '650px']}
 			objectFit="cover"
 			ref={parallax.ref}
 			src="mem8.webp"

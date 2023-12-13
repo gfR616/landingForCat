@@ -10,7 +10,7 @@ const ParallaxImage3 = () => {
 
 	return (
 		<Image
-			boxSize="800px"
+			boxSize={['200px', '350px', '500px', '600px', '800px']}
 			objectFit="cover"
 			ref={parallax.ref}
 			src="mem3.webp"

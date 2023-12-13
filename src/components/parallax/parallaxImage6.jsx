@@ -10,14 +10,14 @@ const ParallaxImage6 = () => {
 
 	return (
 		<Image
-			boxSize="800px"
+			boxSize={['200px', '350px', '500px', '600px', '800px']}
 			objectFit="cover"
 			ref={parallax.ref}
 			src="mem6.webp"
 			alt="mem6"
 			borderRadius={5}
 			position="relative"
-			zIndex="0"
+			zIndex="1"
 			boxShadow="10px 10px 5px 5px rgba(69, 15, 80, 0.5)"
 		/>
 	)
