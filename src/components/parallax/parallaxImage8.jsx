@@ -5,7 +5,7 @@ import { useParallax } from 'react-scroll-parallax'
 const ParallaxImage8 = () => {
 	const parallax = useParallax({
 		easing: 'easeOutQuad',
-		translateY: [60, -40],
+		translateY: [60, -20],
 	})
 	return (
 		<Image

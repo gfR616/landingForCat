@@ -46,7 +46,7 @@ const SubscriptionComponent = () => {
 			</Button>
 			<Link
 				color="teal.500"
-				to="https://gfr616.github.io/landingForCat/"
+				href="https://github.com/gfR616/landingForCat"
 				position="absolute"
 				right={10}
 				bottom={5}
